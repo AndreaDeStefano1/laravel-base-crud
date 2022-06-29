@@ -12149,3 +12149,11 @@ fieldset:disabled .btn {
   }
 }
 
+td {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  vertical-align: middle;
+}
+

@@ -1,1 +1,7 @@
-@import '~bootstrap/scss/bootstrap.scss'
+@import '~bootstrap/scss/bootstrap.scss';
+
+td{
+    height: fit-content ;
+    text-align: center;
+    vertical-align: middle;
+}
