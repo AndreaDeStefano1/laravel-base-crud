@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Str;
 use App\Comic;
 
 use Illuminate\Http\Request;
@@ -36,7 +37,16 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $new_comic = new Comic();
+        $new_comic->title = $data['title'];
+        $new_comic->slug = Str::slug($data['title'], '-');
+        $new_comic->image = $data['image'];
+        $new_comic->type = $data['type'];
+        $new_comic->save();
+
+        return redirect()->route('comics.show', $new_comic->id);
     }
 
     /**

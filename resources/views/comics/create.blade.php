@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-6 offset-3">
         <h1 class="text-center my-5">ADD COMIC</h1>
-        <form method="POST">
+        <form action ="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="mb-3">
               <label for="title" class="form-label">Nome fumetto</label>
