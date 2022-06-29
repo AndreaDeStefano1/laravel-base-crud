@@ -7,6 +7,7 @@
         <th scope="col">Cover</th>
         <th scope="col">Title</th>
         <th scope="col">Type</th>
+        <th scope="col">Options</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
             <td><img src="{{ $comic->image }}" alt=""></td>
             <td>{{ $comic->title }}</td>
             <td>{{ $comic->type }}</td>
+            <td><a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">SHOW</a></td>
         </tr>
         @endforeach
 
