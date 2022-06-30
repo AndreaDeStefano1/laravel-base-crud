@@ -17,7 +17,8 @@
             <td><img src="{{ $comic->image }}" alt=""></td>
             <td>{{ $comic->title }}</td>
             <td>{{ $comic->type }}</td>
-            <td><a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">SHOW</a></td>
+            <td><a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">SHOW</a>
+                <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id) }}">UPDATE</a></td>
         </tr>
         @endforeach
 
