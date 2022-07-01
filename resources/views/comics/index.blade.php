@@ -1,5 +1,10 @@
 @extends('layouts.main')
 @section('content')
+@if(session('confirm'))
+<div class="alert alert-success" role="alert">
+    {{ session('confirm') }}
+</div>
+@endif
 <table class="table">
     <thead>
       <tr>
@@ -20,7 +25,7 @@
             <td>
                 <a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">SHOW</a>
                 <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id) }}">UPDATE</a>
-                <form class='d-inline' action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                <form class='d-inline' onsubmit="return confirm( 'Vuoi eliminare {{ $comic->title }}?' )" action="{{ route('comics.destroy', $comic->id) }}" method="post">
                     @csrf
                     @method('DELETE')
                 <button class="btn btn-danger" type="submit">DELETE</button></form>
