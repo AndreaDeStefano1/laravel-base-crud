@@ -30,14 +30,14 @@ class ComicRequest extends FormRequest
             'type' => 'required|min:3|max:50',
         ];
     }
-    public function attributes()
-{
-    return [
-        'title' => 'nome',
-        'image' => 'immagine',
-        'type' => 'tipo'
-    ];
-}
+//     public function attributes()
+//     {
+//     return [
+//         'title' => 'nome',
+//         'image' => 'immagine',
+//         'type' => 'tipo'
+//      ];
+//     }
 
     // public function messages(){
     //     return [
