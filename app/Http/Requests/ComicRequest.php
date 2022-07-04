@@ -31,17 +31,17 @@ class ComicRequest extends FormRequest
         ];
     }
 
-    public function messages(){
-        return [
-            'title.required' => 'Il campo non può essere vuoto.',
-            'title.min' => 'Il campo non può avere meno di :min caratteri.',
-            'title.max' => 'Il titolo non può essere più lungo di :max.',
-            'image.required' => 'Il campo non può essere vuoto.',
-            'image.min' => 'Il campo non può avere meno di :min caratteri.',
-            'image.max' => 'Il link non può essere più lungo di :max.',
-            'type.required' => 'Il campo non può essere vuoto.',
-            'type.min' => 'Il campo non può avere meno di :min caratteri.',
-            'type.max' => 'Il tipo non può essere più lungo di :max.'
-        ];
-    }
+    // public function messages(){
+    //     return [
+    //         'title.required' => 'Il campo non può essere vuoto.',
+    //         'title.min' => 'Il campo non può avere meno di :min caratteri.',
+    //         'title.max' => 'Il titolo non può essere più lungo di :max.',
+    //         'image.required' => 'Il campo non può essere vuoto.',
+    //         'image.min' => 'Il campo non può avere meno di :min caratteri.',
+    //         'image.max' => 'Il link non può essere più lungo di :max.',
+    //         'type.required' => 'Il campo non può essere vuoto.',
+    //         'type.min' => 'Il campo non può avere meno di :min caratteri.',
+    //         'type.max' => 'Il tipo non può essere più lungo di :max.'
+    //     ];
+    // }
 }
