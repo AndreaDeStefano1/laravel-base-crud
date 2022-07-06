@@ -8,7 +8,7 @@
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Nome fumetto</label>
-$comic->type
+
                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"  value='{{ old('title', $comic->title) }}' >
                   @error('title')
                    <div class="alert alert-danger">{{ $message }}</div>
